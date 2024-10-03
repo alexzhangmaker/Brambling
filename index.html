@@ -7,13 +7,50 @@
 <p>My first paragraph.</p>
 
 </body>
-
 <script>
-    //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-    let jsonURL = 'https://alexzhangmaker.github.io/Brambling/json/demo.json' ;
-    const response = await fetch(jsonURL);
-    let jsonResp = response.json() ;
-    console.log(jsonResp) ;
+    // single keys
+    Mousetrap.bind('4', async function(){ 
+        console.log('4'); 
+        await fetchJSON() ;
+    });
+    Mousetrap.bind("?", function() { console.log('show shortcuts!'); });
+    Mousetrap.bind('esc', function() { console.log('escape'); }, 'keyup');
+
+    // combinations
+    Mousetrap.bind('command+shift+k', function() { console.log('command shift k'); });
+
+    // map multiple combinations to the same callback
+    Mousetrap.bind(['command+k', 'ctrl+k'], function() {
+        console.log('command k or control k');
+
+        // return false to prevent default browser behavior
+        // and stop event from bubbling
+        return false;
+    });
+
+    // gmail style sequences
+    Mousetrap.bind('g i', function() { console.log('go to inbox'); });
+    Mousetrap.bind('* a', function() { console.log('select all'); });
+
+    // konami code!
+    Mousetrap.bind('up up down down left right left right b a enter', function() {
+        console.log('konami code');
+    });
 </script>
+<script>
+
+
+    //https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+    async function fetchJSON(){
+        let jsonURL = 'https://alexzhangmaker.github.io/Brambling/json/demo.json' ;
+        const response = await fetch(jsonURL);
+        let jsonResp = response.json() ;
+        console.log(jsonResp) ;
+    }
+    
+</script>
+<script src="/jsResource/mousetrap.js"></script>
+
 </html>
 
