@@ -58,7 +58,7 @@
     async function fetchJSON(){
         let jsonURL = 'https://alexzhangmaker.github.io/Brambling/json/demo.json' ;
         const response = await fetch(jsonURL);
-        let jsonResp = response.json() ;
+        let jsonResp = await response.json() ;
         console.log(jsonResp) ;
     }
     
