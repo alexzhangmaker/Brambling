@@ -75,9 +75,9 @@
         let cURLQuoto = `https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol=${ticker}` ;
         console.log(cURLQuoto) ;
         var response = await fetch(cURLQuoto,{mode: 'no-cors'});
-        var json = await response.text();
+        var jsonData = await response.json();
 
-        var jsonData = JSON.parse(json);
+        //var jsonData = JSON.parse(json);
         Logger.log(jsonData);
         return jsonData.data[0].current ;
     }
