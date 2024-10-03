@@ -11,6 +11,8 @@
 <h1>My First Heading</h1>
 
 <p>My first paragraph.</p>
+    <button id="idBTNLoadJSON">json Github</button>
+    <button id="idBTNCallXQ">json XQ</button>
 
 </body>
 <script>
@@ -42,6 +44,11 @@
     Mousetrap.bind('up up down down left right left right b a enter', function() {
         console.log('konami code');
     });
+</script>
+<script>
+    document.querySelector('#idBTNLoadJSON').addEventListener('click',async (event)=>{
+        await fetchJSON() ;
+    }) ;
 </script>
 <script>
 
