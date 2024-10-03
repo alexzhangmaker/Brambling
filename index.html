@@ -4,7 +4,7 @@
 <head>
 
     <script src="https://alexzhangmaker.github.io/Brambling/jsResource/mousetrap.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
 </head>
 <body>
 
@@ -49,6 +49,10 @@
     document.querySelector('#idBTNLoadJSON').addEventListener('click',async (event)=>{
         await fetchJSON() ;
     }) ;
+
+    document.querySelector('#idBTNCallXQ').addEventListener('click',async (event)=>{
+        await larkXQQuoto('SH600100') ;
+    }) ;
 </script>
 <script>
 
@@ -63,6 +67,17 @@
     }
     
 </script>
-
+<script>
+    async function larkXQQuoto(ticker){
+        
+        let cURLQuoto = `https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol=${ticker}` ;
+        console.log(cURLQuoto) ;
+        var response = await fetch(cURLQuoto);
+        var json = response.getContentText();
+        var jsonData = JSON.parse(json);
+        Logger.log(jsonData);
+        return jsonData.data[0].current ;
+    }
+</script>
 </html>
 
