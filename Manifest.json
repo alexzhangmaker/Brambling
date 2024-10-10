@@ -1,0 +1,15 @@
+{
+    "name": "Brambling Application",
+    "short_name": "Brambling.PWA",
+    "description": "A recipe application for creating awesome recipes",
+    "start_url": "https://alexzhangmaker.github.io/Brambling/index.html",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "icons": [
+        {   "src": "./Resources/firefox64.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        }
+    ]
+}
