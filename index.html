@@ -71,8 +71,10 @@
     //https://stackoverflow.com/questions/43262121/trying-to-use-fetch-and-pass-in-mode-no-cors
     //https://web.dev/articles/introduction-to-fetch
     async function larkXQQuoto(ticker){
-        
-        let cURLQuoto = `https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol=${ticker}` ;
+        //let cURLQuoto = `https://stock.xueqiu.com/v5/stock/quote.json?symbol=TQQQ&extend=detail` ;
+        //let cURLQuoto = `https://stock.xueqiu.com/v5/stock/realtime/quotec.json?symbol=${ticker}` ;
+        let cURLQuoto = `https://stock.xueqiu.com/v5/stock/quote.json?symbol=SH600100&extend=detail` ;
+
         console.log(cURLQuoto) ;
         var response = await fetch(cURLQuoto,{mode: 'no-cors'});
         var jsonData = await response.arrayBuffer();
