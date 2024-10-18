@@ -63,10 +63,11 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('install', (event) => {
+    /*
   event.waitUntil(
     addResourcesToCache([
       './',
-      './index.html'/*,
+      './index.html',
       './style.css',
       './app.js',
       './image-list.js',
@@ -74,12 +75,14 @@ self.addEventListener('install', (event) => {
       './gallery/bountyHunters.jpg',
       './gallery/myLittleVader.jpg',
       './gallery/snowTroopers.jpg',
-      */
+      
     ])
   );
+  */
 });
 
 self.addEventListener('fetch', (event) => {
+    /*
   event.respondWith(
     cacheFirst({
       request: event.request,
@@ -87,4 +90,5 @@ self.addEventListener('fetch', (event) => {
       fallbackUrl: './gallery/myLittleVader.jpg',
     })
   );
+  */
 });
