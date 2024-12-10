@@ -1,23 +1,24 @@
 {
   "manifest_version": 3,
-  "name": "lark.Notes",
+  "name": "Brambling",
   "version": "1.0",
   "description": "twittering article",
   "background": {
     "service_worker": "service-worker.js"
   },
   "action": {
-    "default_title": "click Note Panel"
+    "default_title": "brambling"
   },
   "side_panel": {
-    "default_path": "larkSPNotes.html"
+    "default_path": "sidepanel.html"
   },
   "permissions": [
     "sidePanel", 
     "tabs",
     "activeTab",
     "bookmarks",
-    "contextMenus"
+    "contextMenus",
+    "alarms"
   ],
   "commands": {
     "_execute_action": {
@@ -28,87 +29,32 @@
     }
   },
   "icons": {
-    "16": "images/firefox16.png",
-    "48": "images/firefox64.png",
-    "128": "images/firefox128.png"
+    "16": "images/airchina.png",
+    "48": "images/airchina.png",
+    "128": "images/airchina.png"
   },
   "content_scripts": [
     {
-      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/arrive.min.js","./jsResource/interact.min.js","csSeekingAlpha.js"],
+      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/arrive.min.js","./jsResource/interact.min.js","csAAStocks.js"],
       "matches": [
-        "https://seekingalpha.com/*"
+        "http://www.aastocks.com/*"
       ]
-    },
-    {
-      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/arrive.min.js","./jsResource/interact.min.js","csXueQiu.js"],
+    },{
+      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/arrive.min.js","./jsResource/interact.min.js","csYahoo.js"],
       "matches": [
-        "https://xueqiu.com/*"
+        "https://finance.yahoo.com/*"
       ]
-    },
-    {
-      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/arrive.min.js","./jsResource/interact.min.js","csWeChat.js"],
-      "css" : ["bootstrap-icons.css"],
+    },{
+      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/arrive.min.js","./jsResource/interact.min.js","csYahooQuote.js"],
       "matches": [
-        "https://mp.weixin.qq.com/*"
+        "https://query1.finance.yahoo.com/*"
       ]
-    },
-    {
-      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/arrive.min.js","./jsResource/interact.min.js","csZhiHu.js"],
+    },{
+      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/arrive.min.js","./jsResource/interact.min.js","csXQQuote.js"],
       "matches": [
-        "https://zhuanlan.zhihu.com/*"
+        "https://stock.xueqiu.com/*"
       ]
-    },
-    {
-      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/arrive.min.js","./jsResource/interact.min.js","csYahooNews.js"],
-      "matches": [
-        "https://finance.yahoo.com/news/*"
-      ]
-    },
-    {
-      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/arrive.min.js","./jsResource/interact.min.js","csIRMKL.js"],
-      "matches": [
-        "https://ir.mklgroup.com/investor-relations/news/*"
-      ]
-    },
-    {
-      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/arrive.min.js","./jsResource/interact.min.js","csIRBrookfield.js"],
-      "matches": [
-        "https://*.brookfield.com/press-releases/*"
-      ]
-    },
-    {
-      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/interact.min.js","csMedium.js"],
-      "matches": [
-        "https://javascript.plainenglish.io/*",
-        "https://medium.com/*"
-      ]
-    },
-    {
-      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/interact.min.js","csReadCache.js"],
-      "matches": [
-        "https://readcache.xyz/*"
-      ]
-    },
-    {
-      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/arrive.min.js","./jsResource/interact.min.js","csAll.js"],
-      "matches": ["<all_urls>"],
-      "exclude_matches": [
-        "http://124.156.193.78:8080/*",
-        "http://127.0.0.1:8082/*",
-        "http://124.156.193.78:8082/",
-        "http://124.156.193.78/*",
-        "https://*.cmu.ac.th/*",
-        "https://*.youtube.com/*",
-        "https://*.netflix.com/*",
-        "http://127.0.0.1:*/*",
-        "https://falconcnx.online:*/*",
-        "https://*.hbogo.co.th/*",
-        "http://192.168.1.118/*"
-      ]
-    },
-    {
-      "js": ["./jsResource/localforage.js","./jsResource/Readability.js","./jsResource/arrive.min.js","./jsResource/interact.min.js","csEastMoney.js"],
-      "matches": ["https://*.securities.eastmoney.com/*"]
-    } 
+    }
   ]
 }
+

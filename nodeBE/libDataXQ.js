@@ -9,6 +9,11 @@ const urlHKXRT= `https://stock.xueqiu.com/v5/stock/quote.json?symbol=00388&exten
 const urlUS =   `https://stock.xueqiu.com/v5/stock/quote.json?symbol=BAM&extend=detail` ;
 */
 
+let cookieTTM={
+    date:'2024-12-05',
+    cookie:`xq_a_token=220b0abef0fac476d076c9f7a3938b7edac35f48; xqat=220b0abef0fac476d076c9f7a3938b7edac35f48; xq_r_token=a57f65f14670a8897031b7c4f10ea42a50894850; xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOi0xLCJpc3MiOiJ1YyIsImV4cCI6MTczNTY5Mjg4OSwiY3RtIjoxNzMzNzQ4NDYyNjU4LCJjaWQiOiJkOWQwbjRBWnVwIn0.ZcAHmKs_S_URUXcppA3GXGU1uSxNPyq8b399veuPReeMfviGg5UuIvXXRXu8CSC-fr32FnRvjM6jIx5Tf9fGYhRk1CTF2UXe-vwp1DAOfiQoaCJbMPZfDuT89lHQAkNzt5jcLEJgCBfGzIWkANrxWKY81PejItOzizlu4_9e9dH2wfw818vNVUBdT58ta236diRqxzf5L8iTSkArvTpg6hoevHodxCHG6oL_b7zBi4nu-CNYAWHzTlvVy8GpUQnuCN4TajhN5WO8EuJIeXYrIVFXRgdwY9CnlaP2PdngWjh0pClABrJegZFaWE3mp5jNBxqyEYTFQF54lWtNfnzhDA; cookiesu=751733748493011; u=751733748493011; device_id=fa9a659827e96884a39ac4ab6e75ed2c; Hm_lvt_1db88642e346389874251b5a1eded6e3=1733748495; HMACCOUNT=B11092AB2E0DBBFD; is_overseas=1; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1733748511; ssxmod_itna=QqUx9DBDRAitKDKD=DXWDHGHPPeqOAi4xAKPmtwtdND/SYED3q0=GFDf4733koPYFGAGeebm8aCG5obGnf2DPoTn4xeq6KYEa0aD84i7DKqibnDivQDjrxxPDxx0oD5xGoDPxDeDAD5DCV6IQD0+zu1yzsoq8h6IzDYa=DiIQDYypDAuhxtAzsEGhBiqDuZvQwxi8D7FfRQEzD7cpmI3DXrqDEn4198dDvggOw1rsD3AQgb2DN2QPx14PYc2D1Giqt=GxaD4eEGDBdM=eYiD31W23zZQDiEU54D=; ssxmod_itna2=QqUx9DBDRAitKDKD=DXWDHGHPPeqOAi4xAKPmtwtdG97MGiDBwWfq7PBhl7FG2GYq08Deq+D`
+};
+
 async function _fetchQuotesXQ(tickers){
     for(let i=0;i<tickers.length;i++){
         let urlQuote=`https://stock.xueqiu.com/v5/stock/quote.json?symbol=${tickers[i]}&extend=detail` ;
@@ -20,7 +25,7 @@ async function _fetchQuotesXQ(tickers){
                 'Accept-Language': 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
                 'Referer': 'https://xueqiu.com/',
                 'Origin': 'https://xueqiu.com/',
-                'Cookie': `xq_a_token=dbc1dc6d13bd101dd06f18c5b7f2fb2eb276fb5a; xqat=dbc1dc6d13bd101dd06f18c5b7f2fb2eb276fb5a; xq_r_token=8009cc86908134cef1e05f27b0fbea84bea0abb7; xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOi0xLCJpc3MiOiJ1YyIsImV4cCI6MTczMDUwODgwMCwiY3RtIjoxNzI3OTU3NjMzNzY2LCJjaWQiOiJkOWQwbjRBWnVwIn0.TjWeQJuF-ihv_LxbEnI6ZXxsf0IqaqxJvCj5L4LkTWJZXkN8TODCAXUC4wkOHUqleIMzQm2aHgCjLZbGWRHPmVemj7ZNEM2Rb3srYH3YSjkA6_qijsH99jbsXTLi9lueZkrV2hzcnjnWn3VgZHtvARwTTnBPC3yAJaEvQ3PUgBeGmZMNMpUhVY1FS1KcuTZxybkhJ_F69UaBInRQHiCZicwylrymAkGyLjeUyj2_orMxQ-aF5ealsp2bnqYyV1GFrEMwoYGJmXt3EuV9gcnk00-8uOVCVCnISPwAsoLKhGO3fp6-vcLkkuyo0w3wbn68nlFx0XXKOvOXRkCoS1Mi6A; cookiesu=901727957680344; u=901727957680344; device_id=96cf82c68da69cd363fd4d330dfc1893; Hm_lvt_1db88642e346389874251b5a1eded6e3=1727957682; HMACCOUNT=34CDCAA13D29A615; s=be12ge9rl1; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1727997169; ssxmod_itna=QqmxgDnWq+GHeGdD7+e5YK0=e62A=xGq+Bmhqi=H7DlhpSDWKGkD6DWP0Wt9YeTGQhifoEbcfBGQ=InRihHEehneDk8gQYK5D84i7DKqibnDivQDjgimqDxx0oD5xGoDPxDeDABKDCZTTKD7xXBfdXUm2jXbqNDmfKDYTKDmLbDnE0V4eXUYGiCAxGgSTI0DY=DQMWO+eNDjfbrNPGyAxGW8rt8EPGuBjj0+7NVDWIk17DvW9hGYA=m07DQeohoK0f5niOQjbmXhAxeniwK0GdvkUODG8C5zDqxD; ssxmod_itna2=QqmxgDnWq+GHeGdD7+e5YK0=e62A=xGq+Bmhqi=eD62bG=Qx05Kr83037Yg0RuDn4ho8lrDG=g8YCGRWZDKewhCq0jMTufK5YbYhxMjtDlmCTo7P2juTPNAjBEvwNTH0fQIaZ=gOenui029xApns7AnW3OyCr2Ik7Oyi5/HpaUHiuEKpSWHOxoYh6hKKGtwr/=i3ujAYFri=IKkETpwKYOG613MOc2KFv2rETSx7/G8iNPaAvIu5H8mK=yWtLCF3RALi76jtH1vyhxz0eOf=MiGYee7yYAeK3UWLxpbaYnpuNIDnEGhi0whAmyD28Uq8lb6IqatAyGTO/ct/5dD07Q0KcBQsDF3fCOWziuD1eoSBWYrw+j33b=YO4DQms7pYr=+0DD7=DY9eeD==`  // You may need a session cookie if required
+                'Cookie': cookieTTM.cookie  // You may need a session cookie if required
             }
         }).then(response => {
             if (!response.ok) {
@@ -32,16 +37,29 @@ async function _fetchQuotesXQ(tickers){
             let jsonQuote={
                 ticker:data.data.quote.symbol,
                 company:data.data.quote.name,
-                quoteTTM:data.data.quote.last_close,
+                quoteTTM:data.data.quote.current,
                 datetime:'2024-10-05 14:31:21 001'
             } ; 
-            await libSQLDB.newUpdateQuoteTTM(jsonQuote) ;
+            //await libSQLDB.newUpdateQuoteTTM(jsonQuote) ;
+            //await libSQLDB.newUpdateQuoteTTM(jsonQuote) ;
+            let urlUpdateQuote = 'http://127.0.0.1:10088/updateQuote.V1/' ;
+            try {
+                const response = await fetch(urlUpdateQuote, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',       
+                },
+                body: JSON.stringify(jsonQuote), 
+                });
+            } catch (error) {
+                console.error('Error:', error.message);
+            }
 
         }).catch(error => console.error('Error:', error));
     }
 }
 
-
+//https://stock.xueqiu.com/v5/stock/quote.json?symbol=00388&extend=detail
 async function _fetchQuoteXQ(ticker){
     {
         let urlQuote=`https://stock.xueqiu.com/v5/stock/quote.json?symbol=${ticker}&extend=detail` ;
@@ -53,7 +71,7 @@ async function _fetchQuoteXQ(ticker){
                 'Accept-Language': 'en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7',
                 'Referer': 'https://xueqiu.com/',
                 'Origin': 'https://xueqiu.com/',
-                'Cookie': `xq_a_token=dbc1dc6d13bd101dd06f18c5b7f2fb2eb276fb5a; xqat=dbc1dc6d13bd101dd06f18c5b7f2fb2eb276fb5a; xq_r_token=8009cc86908134cef1e05f27b0fbea84bea0abb7; xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOi0xLCJpc3MiOiJ1YyIsImV4cCI6MTczMDUwODgwMCwiY3RtIjoxNzI3OTU3NjMzNzY2LCJjaWQiOiJkOWQwbjRBWnVwIn0.TjWeQJuF-ihv_LxbEnI6ZXxsf0IqaqxJvCj5L4LkTWJZXkN8TODCAXUC4wkOHUqleIMzQm2aHgCjLZbGWRHPmVemj7ZNEM2Rb3srYH3YSjkA6_qijsH99jbsXTLi9lueZkrV2hzcnjnWn3VgZHtvARwTTnBPC3yAJaEvQ3PUgBeGmZMNMpUhVY1FS1KcuTZxybkhJ_F69UaBInRQHiCZicwylrymAkGyLjeUyj2_orMxQ-aF5ealsp2bnqYyV1GFrEMwoYGJmXt3EuV9gcnk00-8uOVCVCnISPwAsoLKhGO3fp6-vcLkkuyo0w3wbn68nlFx0XXKOvOXRkCoS1Mi6A; cookiesu=901727957680344; u=901727957680344; device_id=96cf82c68da69cd363fd4d330dfc1893; Hm_lvt_1db88642e346389874251b5a1eded6e3=1727957682; HMACCOUNT=34CDCAA13D29A615; s=be12ge9rl1; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1727997169; ssxmod_itna=QqmxgDnWq+GHeGdD7+e5YK0=e62A=xGq+Bmhqi=H7DlhpSDWKGkD6DWP0Wt9YeTGQhifoEbcfBGQ=InRihHEehneDk8gQYK5D84i7DKqibnDivQDjgimqDxx0oD5xGoDPxDeDABKDCZTTKD7xXBfdXUm2jXbqNDmfKDYTKDmLbDnE0V4eXUYGiCAxGgSTI0DY=DQMWO+eNDjfbrNPGyAxGW8rt8EPGuBjj0+7NVDWIk17DvW9hGYA=m07DQeohoK0f5niOQjbmXhAxeniwK0GdvkUODG8C5zDqxD; ssxmod_itna2=QqmxgDnWq+GHeGdD7+e5YK0=e62A=xGq+Bmhqi=eD62bG=Qx05Kr83037Yg0RuDn4ho8lrDG=g8YCGRWZDKewhCq0jMTufK5YbYhxMjtDlmCTo7P2juTPNAjBEvwNTH0fQIaZ=gOenui029xApns7AnW3OyCr2Ik7Oyi5/HpaUHiuEKpSWHOxoYh6hKKGtwr/=i3ujAYFri=IKkETpwKYOG613MOc2KFv2rETSx7/G8iNPaAvIu5H8mK=yWtLCF3RALi76jtH1vyhxz0eOf=MiGYee7yYAeK3UWLxpbaYnpuNIDnEGhi0whAmyD28Uq8lb6IqatAyGTO/ct/5dD07Q0KcBQsDF3fCOWziuD1eoSBWYrw+j33b=YO4DQms7pYr=+0DD7=DY9eeD==`  // You may need a session cookie if required
+                'Cookie': cookieTTM.cookie//`cookiesu=601728857549963; u=601728857549963; device_id=96cf82c68da69cd363fd4d330dfc1893; Hm_lvt_1db88642e346389874251b5a1eded6e3=1728857552; HMACCOUNT=90EF1010BD0DEC42; s=bh1ikv3fou; xq_a_token=f84a0b79c9e449cb1003cb36412faa34001a6697; xqat=f84a0b79c9e449cb1003cb36412faa34001a6697; xq_r_token=b24e38a4224932f5c7abd28126e8fc377b42755b; xq_id_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1aWQiOi0xLCJpc3MiOiJ1YyIsImV4cCI6MTczMTgwNDgwNiwiY3RtIjoxNzI5MzA5MzM2NTA0LCJjaWQiOiJkOWQwbjRBWnVwIn0.ap_m7pk8HNFLR7WtXVlcF100k4PSmN1kjrPLDKpXiHN3bRx-g27TEQ1OibP0cEd4OPNTlWHu9Ap-5_My2C6OXz55TWD51jCzOvQN9vw6aZB1vHBGDif4jbeKntuTatX2n0oKaUfB4gcL4srwZDp6T9yeqhtjkVHKooGq-8GWvYgqG3LE3mAQ-jDlkS0F4bPBrdHOWyKEarNdGIebvKo8rhbxSNPfnj_a8F4kxwq5N1s_wU2etTj_aWnZpwE_vfLUNot6KGp9xJPuzsYcDEj2Os8zbB1BdQ6iU2-rHqJgbfzZgXJR9NmoMSc2Axh-D-nZ-0Jd5JZovX_9gEd04hgk8A; is_overseas=1; Hm_lpvt_1db88642e346389874251b5a1eded6e3=1729309368; ssxmod_itna=YqAx0QDteCqqcDRxBcDB+2tIG77wYGOQeO+YyBSDBwMO4AQDyD8xA3GEIAoKQfil00w5LeKfqhqLe=AcqKoFP+qhaeD7ufsfDneG0DQKGmmxGt7D7kb+oD44GTDt4DTD34DYDi2=DBSvKQD04z2aHz1xwOspKzDYcQDiKQDYHpDAThVPYz1=Dh9YqDuc5Qhxi8D79E0eozD7ap+z3DXoqDEj+CnbdDv2OOhO2z/xYQyt2YTZuN3QrrCia4rCiY7r0eQQ457pGyaAWqQAe5fA4uT7DDiht54D; ssxmod_itna2=YqAx0QDteCqqcDRxBcDB+2tIG77wYGOQeO+YyBD8TcDGNaG2zxFqiQqx`  // You may need a session cookie if required
             }
         }).then(response => {
             if (!response.ok) {
@@ -65,10 +83,22 @@ async function _fetchQuoteXQ(ticker){
             let jsonQuote={
                 ticker:data.data.quote.symbol,
                 company:data.data.quote.name,
-                quoteTTM:data.data.quote.last_close,
+                quoteTTM:data.data.quote.current,
                 datetime:'2024-10-05 14:31:21 001'
             } ; 
-            await libSQLDB.newUpdateQuoteTTM(jsonQuote) ;
+            //await libSQLDB.newUpdateQuoteTTM(jsonQuote) ;
+            let urlUpdateQuote = 'http://127.0.0.1:10088/updateQuote.V1/' ;
+            try {
+                const response = await fetch(urlUpdateQuote, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',       
+                },
+                body: JSON.stringify(jsonQuote), 
+                });
+            } catch (error) {
+                console.error('Error:', error.message);
+            }
 
         }).catch(error => console.error('Error:', error));
     }

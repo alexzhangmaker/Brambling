@@ -1,0 +1,3 @@
+//https://query1.finance.yahoo.com/v7/finance/quote?&symbols=0388.HK&fields=currency,fromCurrency,toCurrency,exchangeTimezoneName,exchangeTimezoneShortName,gmtOffSetMilliseconds,regularMarketChange,regularMarketChangePercent,regularMarketPrice,regularMarketTime,preMarketTime,postMarketTime,extendedMarketTime&crumb=h6MOsImbt.2&formatted=false&region=US&lang=en-US
+
+console.log('csYahooQuote entered');

@@ -8,19 +8,19 @@ const TELEGRAM_URL = 'https://api.telegram.org/bot' + token + '/sendMessage?chat
 
 
 
- async function _notifyTelegram(title, body) {
-  axios.get(TELEGRAM_URL + encodeURIComponent(title + EOL + body))
-   .then(function (response) {
-    // handle success
-    console.log(response);
-   })
-   .catch(function (error) {
-    // handle error
-    console.log(error);
-   })
+async function _notifyTelegram(title, body) {
+    axios.get(TELEGRAM_URL + encodeURIComponent(title + EOL + body))
+    .then(function (response) {
+      // handle success
+      console.log(response);
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    }) ;
  }
 
 // _notifyTelegram('Hello World', 'This is my first notification using NodeJS');
 
 
- exports.pushTelegram                     = _notifyTelegram ;
+ exports.notifyTelegram                     = _notifyTelegram ;

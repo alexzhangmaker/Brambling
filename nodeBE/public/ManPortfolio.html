@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brambling.Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://alexzhangmaker.github.io/Brambling/jsResource/mousetrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="./js/wclarkDialogsV2.js"></script>
+<script src="./js/dlgFunctions.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <link href="./css/wcTable.css" rel="stylesheet">
+    <link href="./css/fontGoogle.css" rel="stylesheet">
+    <link href="./css/wcDetails.css" rel="stylesheet">
+
+<style>
+
+</style>
+    <style>
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  min-height: 100vh;
+  width: 100%;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+main {
+  max-width: 900px !important;
+  width: 96% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+main section {
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100% !important;
+  max-width: unset !important;
+}
+
+.bramblingBTN{
+  font-size: 16px;
+}
+
+.bramblingBTN:hover{
+  cursor: pointer;
+}
+
+#datatable {
+  text-align: center;
+  width: 100% !important;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  font-size: small !important;
+
+  overflow-y: auto;
+}
+#datatable * {
+  font-weight: 500;
+  text-align: left;
+}
+
+main {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width:100% ;
+  height:100% ;
+}
+main section {
+  padding-top: 1rem;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+main [role=banner] {
+  padding: 2rem 0;
+  margin-bottom: 1rem;
+}
+main [role=banner] h1 {
+  font-size: xx-large;
+}
+main [role=banner] h2 {
+  font-size: x-large;
+}
+
+main {
+  height: 100% !important;
+  min-height: 100vh !important;
+}
+
+@media screen and (min-width: 640px) {
+  main {
+    max-width: 1140px !important;
+  }
+
+  #datatable {
+    font-size: unset !important;
+    width: 100% !important;
+    max-width: unset !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+  }
+}
+    </style>
+    <style>
+      .assetSummary{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        font-size: 16px;
+      }
+
+      /*
+      .assetSummary span{
+        width:20% ;
+      }
+      */
+      
+
+    </style>
+    <style>
+      .editBox{
+        width:80%;
+        display: inline-block ;
+      }
+
+      .editBox :hover{
+        /*border-bottom: solid;*/
+        cursor: pointer;
+        border-bottom: solid;
+
+      }
+
+      /*
+      [contenteditable] {
+        outline: 0px solid transparent;
+      }
+      */
+
+      .editBox {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+  }
+
+  .editBox:hover {
+    border-bottom-color: #000; /* Replace with your desired hover border color */
+  }
+
+  .editBox:focus {
+    border-bottom-color: #000; /* Replace with your desired focus border color */
+  }
+
+    </style>
+</head>
+<body>
+
+
+
+<main role="main">
+
+	<button id="idBTNLoadData">load Data</button>
+  <button id="idBTNLogTransaction" disabled>Log 交易</button>
+  <button id="idBTNAccountView" disabled>Account View</button>
+  <button id="idBTNAssetView" disabled>Asset View</button>
+  <button id="idBTNTransactionView" disabled>交易Logs</button>
+  <button id="idBTNRuleView">规则视图</button>
+  <button id="idBTNUpdateRule" disabled>更新规则</button>
+  <button id="idBTNUploadRule" disabled>上传规则</button>
+
+  <button id="idBTNRulePlus">添加规则</button>
+  <button id="idBTNUpdateQuote">QuoteTTM</button>
+  <button id="idBTNCashView">现金流视图</button>
+
+
+  <input type="text" placeholder="buy/sell ticker amout price account">
+	<section class="fluid container-fluid fluid-container">
+		<!-- The DataTable container -->
+		<div id="datatable" class="open-sans-Lark"></div>
+	</section>
+
+  <!-----
+  <details>
+    <summary class="assetSummary">
+      <span>00014/希慎兴业</span>
+      <span>shares:20000</span>
+      <span>costPerShare:10.251</span>
+      <span>Quote<sup style="font-size: 14px;">TM</sup></span>
+      <span>P/E:-4.3%</span>
+      <span>%Portfolio:2.2%</span>
+    </summary>
+    <div class="container-styled-table" style="width:100%;">
+      <table class="styled-table">
+          <caption>Portfolio overview in 2024</caption>
+      
+          <thead>
+             <tr>
+                  <th>ticker</th>
+                  <th>share</th>
+                  <th>Quote[TTM]</th>
+                  <th>Avg Price</th>
+                  <th>P/E %</th>
+                  <th>Mkt Value</th>
+                </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td class="companyBrief">
+                    <div style="font-weight: 500;text-align: left;">BIP</div>
+                    <div style="font-size: 0.85em;text-align: left;">Brookfield Infrastructure Partner</div>
+                  </td>
+                  <td>2,000</td>
+                  <td>42.22</td>
+                  <td>38.13</td>
+                  <td>32.4%</td>
+                  <td>84,000</td>
+              </tr>
+            <tr>
+                  <td class="companyBrief">
+                    <div style="font-weight: 500;text-align: left;">BIP</div>
+                    <div style="font-size: 0.85em;text-align: left;">Brookfield Infrastructure Partner</div>
+                  </td>
+                  <td>2,000</td>
+                  <td>42.22</td>
+                  <td>38.13</td>
+                  <td>32.4%</td>
+                  <td>84,000</td>
+              </tr>
+            <tr>
+                  <td class="companyBrief">
+                    <div style="font-weight: 500;text-align: left;">BIP</div>
+                    <div style="font-size: 0.85em;text-align: left;">Brookfield Infrastructure Partner</div>
+                  </td>
+                  <td>2,000</td>
+                  <td>42.22</td>
+                  <td>38.13</td>
+                  <td>32.4%</td>
+                  <td>84,000</td>
+              </tr>
+            <tr>
+                  <td class="companyBrief">
+                    <div style="font-weight: 500;text-align: left;">BIP</div>
+                    <div style="font-size: 0.85em;text-align: left;">Brookfield Infrastructure Partner</div>
+                  </td>
+                  <td>2,000</td>
+                  <td>42.22</td>
+                  <td>38.13</td>
+                  <td>32.4%</td>
+                  <td>84,000</td>
+              </tr>
+            <tr>
+                  <td class="companyBrief">
+                    <div style="font-weight: 500;text-align: left;">BIP</div>
+                    <div style="font-size: 0.85em;text-align: left;">Brookfield Infrastructure Partner</div>
+                  </td>
+                  <td>2,000</td>
+                  <td>42.22</td>
+                  <td>38.13</td>
+                  <td>32.4%</td>
+                  <td>84,000</td>
+              </tr>
+          </tbody>
+        <tfoot>
+          <th scope="row">Annual</th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Sum:1162.93</td>
+          
+        </tfoot>
+      </table>
+      </div>
+  </details>
+  --->
+
+
+  
+</main>
+
+
+<footer role="contentinfo">
+	<p>Copyright &copy; 2020. All Rights Reserved</p>
+</footer>
+
+
+<!-- include the dependencies -->
+<script src="https://unpkg.com/sortablejs@1.7.0/Sortable.min.js"></script>
+<script src="https://unpkg.com/clusterize.js@0.18.0/clusterize.min.js"></script>
+<!-- include the lib -->
+<!-- initialize DataTable -->
+<script>
+//refer https://dev.to/dcodeyt/creating-beautiful-html-tables-with-css-428l
+//refer https://piccalil.li/blog/styling-tables-the-modern-css-way/
+//refer https://www.digitalocean.com/community/tutorials/how-to-style-a-table-with-css
+//refer https://dev.to/madsstoumann/a-guide-to-styling-tables-28d2
+let gPortfolio={
+  schema:{},
+  Holdings:[]
+};
+
+function _onClickQuoteTTM(event){
+  let ticker = 'BN' ;
+  _fetchQuotesYahoo(ticker) ;
+}
+
+async function _onClickViewRule(event){
+  let urlFetchRules= '/fetchAllTriggers.V1' ;
+  let response = await fetch(urlFetchRules) ;
+  let jsonRules = await response.json() ;
+  console.log(jsonRules) ;
+  //      renderGroupedAsset(document.querySelector('#datatable'),aggHoldings[i],13,{}) ;
+  renderAlertRules(document.querySelector('#datatable'),jsonRules) ;
+}
+
+
+async function _onClickUpdateRule(event){
+
+  let aggHoldings = aggregate4Asset(gPortfolio.Holdings) ;
+
+  
+  //tagRule.dataset.ticker
+  let tagTblRule = document.querySelector('#idTblAlertRule') ;
+  let tagRules = tagTblRule.querySelectorAll('tr') ;
+  for(let i=0;i<aggHoldings.length;i++){
+    //let tagRule = tagRules[i];
+    //let ruleID = `ruleID${aggHoldings[i].ticker}` ;
+    //let tagRule = tagTblRule.querySelector(ruleID) ;
+    for(let j=0;j<tagRules.length;j++){
+      if(tagRules[j].dataset.ticker == aggHoldings[i].ticker){
+        tagRules[j].querySelectorAll('td')[2].innerText = Math.round(aggHoldings[i].costPerShare*90)/100 ;
+        continue ;
+      }
+    }
+  }
+}
+
+async function _onClickUploadRule(event){
+  let tagTblRule = document.querySelector('#idTblAlertRule') ;
+  let tagRules = tagTblRule.querySelectorAll('tr') ;
+
+  let urlUpload = `/updateTrigger.V1/` ;
+  for(let j=1;j<tagRules.length;j++){
+    if(tagRules[j].dataset.need2Update == 'false')continue ;
+
+    let tagTDs = tagRules[j].querySelectorAll('td') ;
+    let jsonRule = {
+      triggerID:parseInt(tagRules[j].dataset.triggerID),
+      ticker:tagRules[j].dataset.ticker,
+      lowerThan:parseFloat(tagTDs[2].innerText),
+      exchange:tagTDs[3].innerText,
+      status:tagTDs[4].innerText,
+      action:tagTDs[5].innerText,
+      actionResult:tagTDs[6].innerText,
+    } ;
+    console.log(jsonRule) ;
+    let jsonRuleReq= {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(jsonRule)
+    } ;
+    let Response = await fetch(urlUpload,jsonRuleReq);
+    let jsonResp = await Response.json() ;
+  }
+  
+}
+
+
+
+function renderAlertRules(tagContainer,jsonRules){
+  tagContainer.innerHTML=`` ;
+  let tagTbl = document.createElement('table') ;
+  
+  tagContainer.appendChild(tagTbl) ;
+  tagTbl.classList.add('styled-table') ;
+  tagTbl.style.width="100%" ;
+  tagTbl.id = 'idTblAlertRule' ;
+  tagTbl.style.fontSize='16px';
+  tagTbl.innerHTML=`
+
+    <thead>
+      <th style="width:10%;">triggerID</th>
+      <th style="width:10%;">ticker</th>
+      <th style="width:20%;">lowerThan</th>
+      <th style="width:10%;">exchange</th>
+      <th style="width:10%;">status</th>
+      <th style="width:20%;">action</th>
+      <th style="width:20%;">actionResult</th>
+    </thead>
+    <tbody></tbody>
+  ` ;
+  let tagTBody = tagTbl.querySelector('tbody') ;
+  jsonRules.forEach(jsonRule => {
+    let tagRule = document.createElement('tr') ;
+    tagTBody.appendChild(tagRule) ;
+    tagRule.innerHTML=`
+      <td style="width:10%;">${jsonRule.triggerID}</td>
+      <td style="width:10%;">${jsonRule.ticker}</td>
+      <td style="width:20%;"><div contenteditable="true" class="editBox">${Math.round(jsonRule.lowerThan*100)/100}</div><i class="bi-check2-circle bramblingBTN"></i></td>
+      <td style="width:10%;">${jsonRule.exchange}</td>
+      <td style="width:10%;">${jsonRule.status}</td>
+      <td style="width:20%;">${jsonRule.action}</td>
+      <td style="width:20%;">${jsonRule.actionResult}</td>
+    ` ;
+    tagRule.id=`ruleID${jsonRule.ticker}` ;
+    tagRule.dataset.ticker = jsonRule.ticker ;
+    tagRule.dataset.triggerID = jsonRule.triggerID ;
+    tagRule.dataset.need2Update = 'false' ;
+    tagRule.querySelector('.bi-check2-circle').addEventListener('click',(event)=>{
+      tagRule.dataset.need2Update = 'true' ;
+    }) ;
+
+
+    tagRule.querySelector('.editBox').addEventListener('input', function (e) {
+      const content = this.innerText;
+
+      // Allow only digits and a single dot
+      const sanitizedContent = content.replace(/[^0-9.]/g, ''); // Remove non-digit and non-dot characters
+      const parts = sanitizedContent.split('.');
+      
+      // Keep only the first dot and digits before and after it
+      const validContent =
+        parts.length > 1
+          ? parts[0] + '.' + parts.slice(1).join('').replace(/\./g, '')
+          : sanitizedContent;
+
+      if (content !== validContent) {
+        this.innerText = validContent; // Replace invalid content
+        placeCaretAtEnd(this); // Ensure the caret stays at the end
+      }
+    });
+
+  });
+}
+
+
+
+// Helper function to place the caret at the end of the content
+function placeCaretAtEnd(el) {
+  const range = document.createRange();
+  const selection = window.getSelection();
+  range.selectNodeContents(el);
+  range.collapse(false);
+  selection.removeAllRanges();
+  selection.addRange(range);
+}
+
+document.querySelector('#idBTNLoadData').addEventListener('click',async (event)=>{
+    const el = document.getElementById("datatable");
+    await loadData();
+}) ;
+
+
+
+async function loadData(){
+    let urlHolding='http://127.0.0.1:10088/fetchHoldings.V1' ;
+    let response = await fetch(urlHolding) ;
+    let jsonHoldings = await response.json() ;
+
+    
+    gPortfolio.Holdings = jsonHoldings ;
+    for(let i=0;i<gPortfolio.Holdings.length;i++){
+      let urlQuote = `/fetchQuoteTTM.V1/:${gPortfolio.Holdings[i].ticker}` ;
+      response = await fetch(urlQuote) ;
+      let jsonQuote = await response.json() ;
+      gPortfolio.Holdings[i].QuoteTTM = jsonQuote.quoteTTM ;
+    }
+    console.log(gPortfolio.Holdings) ;
+    document.querySelector('#idBTNAssetView').removeAttribute("disabled");
+    document.querySelector('#idBTNUpdateRule').removeAttribute("disabled");
+    document.querySelector('#idBTNUploadRule').removeAttribute("disabled");
+
+}
+
+async function _onClickCashView(event){
+
+  document.querySelector('#datatable').innerHTML='';
+
+} 
+
+async function _onAssetView(event){
+  //gPortfolio.Holdings
+  let aggHoldings = aggregate4Asset(gPortfolio.Holdings) ;
+  document.querySelector('#datatable').innerHTML='';
+  for(let i=0;i<aggHoldings.length;i++){
+    renderGroupedAsset(document.querySelector('#datatable'),aggHoldings[i],aggHoldings[i].QuoteTTM,{}) ;
+  }
+}
+</script>
+<script>
+  
+  function categorize4Asset(Holdings){
+
+  }
+
+  function aggregate4Asset(Holdings){
+    console.log('aggregate4Asset entered') ;
+    const groupedAssets = Holdings.reduce((result, obj) => {
+        (result[obj.ticker] = result[obj.ticker] || []).push(obj);
+        return result;
+    }, {});
+    let tickers = Object.keys(groupedAssets) ;
+
+    let assets4Tickers=[] ;
+    for(let i=0;i<tickers.length;i++){
+      let assets4Ticker = {
+        ticker:groupedAssets[tickers[i]][0].ticker,
+        company:groupedAssets[tickers[i]][0].company,
+        accountID:groupedAssets[tickers[i]][0].accountID,
+        totalShare:0,
+        totalCost:0,
+        costPerShare:0,
+        QuoteTTM:groupedAssets[tickers[i]][0].QuoteTTM,
+        holdings:groupedAssets[tickers[i]],
+        currency:groupedAssets[tickers[i]][0].currency
+      } ;
+      //Math.round(num * 100) / 100
+      for(let j=0;j<assets4Ticker.holdings.length;j++){
+        assets4Ticker.totalShare = assets4Ticker.totalShare + assets4Ticker.holdings[j].holding ;
+        assets4Ticker.totalCost = assets4Ticker.totalCost +  assets4Ticker.holdings[j].costPerShare*assets4Ticker.holdings[j].holding ;
+        assets4Ticker.totalCost = Math.round(assets4Ticker.totalCost) ;
+        //let number = Number(`${assets4Ticker.totalCost}`);
+        //assets4Ticker.totalCost = parseFloat(number.toFixed(2)) ;
+      }
+      assets4Ticker.costPerShare = Math.round(assets4Ticker.totalCost/assets4Ticker.totalShare*100)/100 ;
+      console.log(assets4Ticker) ;
+
+      //.sort((a, b) => b.age - a.age)
+      assets4Tickers.push(assets4Ticker) ;
+    }
+
+    assets4Tickers.sort((a, b) => b.totalCost - a.totalCost) ;
+
+    return assets4Tickers ;
+  }
+
+  
+  function renderGroupedAsset(tagContainer,jsonGroupedAsset,assetQuoteTTM,jsonPortfolio){
+    let tagAsset = document.createElement('details') ;
+    tagAsset.currency = jsonGroupedAsset.currency ;
+    tagAsset.innerHTML=`
+      <summary class="assetSummary">
+        <div>
+        <span style="width:20%;">${jsonGroupedAsset.company}</span>
+        <span style="width:15%;">shares:${jsonGroupedAsset.totalShare}</span>
+        <span style="width:20%;">total Cost:${new Intl.NumberFormat({ maximumSignificantDigits: 3 }).format(jsonGroupedAsset.totalCost)}</span>
+
+        <span style="width:20%;">cost/share:${jsonGroupedAsset.costPerShare}</span>
+        <span style="width:10%;">Quote:${assetQuoteTTM}</span>
+        <span style="width:10%;">P/E:${Math.round((assetQuoteTTM/jsonGroupedAsset.costPerShare-1)*100)}%</span>
+        </div>
+      </summary>
+      <div class="container-styled-table" style="width:100%;"></div>
+    ` ;
+    tagContainer.appendChild(tagAsset) ;
+
+    let tagTblContainer = tagAsset.querySelector('.container-styled-table') ;
+    let tagTbl = document.createElement('table') ;
+    tagTblContainer.appendChild(tagTbl) ;
+    tagTbl.classList.add('styled-table') ;
+    tagTbl.innerHTML=`
+      
+      <thead>
+        <tr>
+          <th>ticker</th>
+          <th>share</th>
+          <th>Quote[TTM]</th>
+          <th>Avg Price</th>
+          <th>P/E %</th>
+          <th>Mkt Value</th>
+          <th>account</th>
+
+        </tr>
+      </thead>
+      <tbody></tbody>
+    `;
+    let tagTBody = tagTbl.querySelector('tbody') ;
+    for(let i=0;i<jsonGroupedAsset.holdings.length;i++){
+      let tagHolding = document.createElement('tr') ;
+      tagHolding.innerHTML=`
+        <td class="companyBrief">
+          <div style="font-weight: 500;text-align: left;">${jsonGroupedAsset.holdings[i].ticker}</div>
+          <div style="font-size: 0.85em;text-align: left;">${jsonGroupedAsset.holdings[i].company}</div>
+        </td>
+        <td>${jsonGroupedAsset.holdings[i].holding}</td>
+        <td>${assetQuoteTTM}</td>
+        <td>${jsonGroupedAsset.holdings[i].costPerShare}</td>
+        <td>${assetQuoteTTM/jsonGroupedAsset.holdings[i].costPerShare-1}</td>
+        <td>${jsonGroupedAsset.holdings[i].holding*assetQuoteTTM}</td>
+        <td>${jsonGroupedAsset.holdings[i].accountID}</td>
+
+      ` ;
+      tagTBody.appendChild(tagHolding) ;
+    }
+
+
+  }
+</script>
+
+
+<script>
+
+document.querySelector('#idBTNAssetView').addEventListener('click',_onAssetView) ;
+document.querySelector('#idBTNLogTransaction').addEventListener('click',_onClickLogDeal) ;
+document.querySelector('#idBTNRulePlus').addEventListener('click',_onClickRulePlus) ;
+document.querySelector('#idBTNUpdateQuote').addEventListener('click',_onClickQuoteTTM) ;
+document.querySelector('#idBTNRuleView').addEventListener('click',_onClickViewRule) ;
+document.querySelector('#idBTNUpdateRule').addEventListener('click',_onClickUpdateRule) ;
+document.querySelector('#idBTNUploadRule').addEventListener('click',_onClickUploadRule) ;
+document.querySelector('#idBTNCashView').addEventListener('click',_onClickCashView) ;
+
+
+
+</script>
+</body>
+
+   
+</html>
+

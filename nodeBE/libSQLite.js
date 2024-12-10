@@ -4,6 +4,8 @@ const SQLDBFilePortfolio = './Database/portfolioDB.db' ;
 
 const sqlite3 = require('sqlite3');
 const { open } = require('sqlite');
+const fs = require('fs');
+const duckdb = require('duckdb');
 
 
 function createDbConnection(filename) {
@@ -129,12 +131,12 @@ async function _newQuoteTicker(jsonTicker){
 }
 
 
+
 async function _fetchAllTickers(){
     sqlite3.verbose();
     try {
 
         const dbConnection = await createDbConnection(SQLDBFileQuote);
-
         let cSelectStmt = `SELECT * FROM globalQuotes` ;
         const jsonTickers = await dbConnection.all(cSelectStmt, []);
         console.log(jsonTickers)
@@ -241,6 +243,7 @@ async function _updateTrigger(jsonTrigger){
 async function _newTransaction(jsonTransaction){
     sqlite3.verbose();
     try {
+        console.log(jsonTransaction) ;
         let cDate = new Date() ;
         jsonTransaction.transactionID = genSerialID(formatTimeStamp(cDate)) ;
         jsonTransaction.cDateTime = cDate.getTime() ;
@@ -273,6 +276,8 @@ async function _newUpdateHolding(jsonTransaction){
 
     sqlite3.verbose();
     try {
+        console.log(jsonTransaction) ;
+
         const dbConnection = await createDbConnection(SQLDBFilePortfolio);
 
         let cSelectStmt = `SELECT * FROM holdingsTbl where ticker = ? AND accountID = ?` ;
@@ -330,6 +335,16 @@ async function _fetchAllHoldings(){
     }
 }
 
+async function _exportHolding2JSON(uriFile){
+    try {
+        let jsonHoldings = await _fetchAllHoldings() ;
+
+        fs.writeFileSync(uriFile, JSON.stringify(jsonHoldings, null, 3), 'utf8');
+        console.log(`Data successfully saved to ${uriFile}`);
+    } catch (error) {
+        console.log('An error has occurred ', error);
+    }
+}
 
 
 async function _newUpdateAccountBS(jsonAccountBS){
@@ -413,148 +428,137 @@ async function _batchClearancePortfolio(){
     }
 }
 
-async function doWork(){
-    
-    let jsonTransaction={
-        transactionID:'d',
-        accountID:'GJZQ',
-        ticker:'00014',
-        company:'希慎兴业',
-        operation:'buy',
-        price:12.80,
-        amount:1000,
-        cDateTime:10,
-        currency:'HKD',
-        exchange:'HK'
-    } ;
-    //await _commitTransaction(jsonTransaction) ;
 
-    let jsonTicker={
-        ticker:jsonTransaction.ticker,
-        company:jsonTransaction.company,
-        currency:jsonTransaction.currency,
-        exchange:jsonTransaction.exchange
-    } ;
+async function _updateQuotesUsingHolding(){
+    let cDate = new Date() ;
+    cDatetime = genSerialID(formatTimeStamp(cDate)) ;
 
-    //await _newQuoteTicker(jsonTicker) ;
-    //await _fetchAllTickers() ;
-    
-
-    
-    
-   //await _batchClearancePortfolio() ;
-   
-    let jsonTrigger={
-        ticker:'01038',
-        lowerThan:45.00,
-        exchange:'HK'
-    } ;
-    //await _newTrigger(jsonTrigger) ;
-
-    //console.log(await _fetchAllTriggers()) ;
-
-    await _resumeAllTriggers() ;
-
-}
-
-
-
-async function initData(){
-    let accountData=[
-        /*['IB7075','CNH','CNH',11.23,10,'USD','US'],
-        ['IB7075','PAX','PAX',11.34,100,'USD','US'],
-        ['IB7075','BAM','BAM',39.66,200,'USD','US'],
-        ['IB7075','APO','APO',99.88,100,'USD','US'],
-        ['IB7075','MKL','MKL',1490.63,10,'USD','US'],
-        ['IB7075','BN','BN',31.01,1000,'USD','US'],
-        ['IB3979','PFF','PFF',33.30,1,'USD','US'],
-        ['IB3979','EWA','EWA',26.49,10,'USD','US'],
-        ['IB3979','EWU','EWU',36.65,10,'USD','US'],
-        //['IB3979','C38U','APO',99.88,100,'USD','US'],
-        //['IB3979','MKL','MKL',1490.63,10,'USD','US'],
-        ['IB3979','O','Realty Income',57.94,200,'USD','US'],
-        //['IB3979','US-T','BN',31.01,1000,'USD','US'],
-        ['IB3979','SCHD','SCHD',26.09,600,'USD','US'],
-
-        ['IB1279','BEPC','BEPC',29.88,10,'USD','US'],
-        ['IB1279','BCE','BCE',33.12,10,'USD','US'],
-        ['IB1279','NGG','NGG',66.02,5,'USD','US'],
-        ['IB1279','ENB','ENB',56.58,10,'USD','US'],
-        ['IB1279','BIPC','BIPC',41.07,10,'USD','US'],
-        ['IB1279','FTS','FTS',43.24,10,'USD','US'],
-        ['IB1279','00014','希慎兴业',11.23,1000,'HKD','HK'],
-        ['IB1279','01972','太古地产',12.71,1000,'HKD','HK'],
-        ['IB1279','00010','恒隆集团',11.49,10000,'HKD','HK'],
-        ['IB1279','00778','置富产业信托',4.67,30000,'HKD','HK'],
-        ['IB1279','00823','领展房地产信托',39.17,5000,'HKD','HK'],
-
-        ['IB6325','SEQI.L','SEQI',0.8510,100,'GBP','LSE'],
-        ['IB6325','3IN.L','3IN',3.450,100,'GBP','LSE'],
-        ['IB6325','CTY.L','CTY',3.9747,100,'GBP','LSE'],
-        ['IB6325','GCP.L','GCP',0.8820,1000,'GBP','LSE'],
-        ['IB6325','UKW.L','UKW',1.4536,4000,'GBP','LSE'],
-        ['IB6325','TRIG.L','TRIG',1.104,6000,'GBP','LSE'],
-        ['IB6325','HICL.L','HICL',1.3976,5000,'GBP','LSE'],
-        ['IB6325','INPP.L','INPP',1.3361,6000,'GBP','LSE']
-        */
-        /*
-        ['GJZQ','00006','电能实业',49.917,500,'HKD','HK'],
-        ['GJZQ','00010','恒隆集团',10.127,4000,'HKD','HK'],
-        ['GJZQ','00014','希慎兴业',13.221,1000,'HKD','HK'],
-        ['GJZQ','00135','昆仑能源',7.753,2000,'HKD','HK'],
-        ['GJZQ','00177','江苏宁沪高速',7.665,2000,'HKD','HK'],
-        ['GJZQ','00371','北控水务集团',2.314,8000,'HKD','HK'],
-        ['GJZQ','00384','中国燃气',6.832,2000,'HKD','HK'],
-        ['GJZQ','00683','嘉里建设',16.567,1000,'HKD','HK'],
-        ['GJZQ','00728','中国电信',4.773,4000,'HKD','HK'],
-        ['GJZQ','00836','华润电力',19.812,2000,'HKD','HK'],
-        ['GJZQ','00941','中国移动',71.569,500,'HKD','HK'],
-        ['GJZQ','00966','中国太平',16.57,52400,'HKD','HK'],
-        ['GJZQ','01038','长江基建集团',50.479,500,'HKD','HK'],
-        ['GJZQ','01193','华润燃气',30.977,200,'HKD','HK'],
-        ['GJZQ','02688','新奥能源',52.129,100,'HKD','HK'],
-        ['GJZQ','09633','农夫山泉',30.396,400,'HKD','HK']
-        */
-        /*
-        ['PAZQ','02318','中国平安',38.73,5000,'HKD','HK'],
-        ['HTZQ','SH600009','上海机场',42.261,300,'CNY','CN'],
-        ['HTZQ','SH600887','伊利股份',22.96,300,'CNY','CN'],
-        ['HTZQ','SH600007','中国国贸',23.51,100,'CNY','CN'],
-        ['GJZQ','00966','中国太平',15.878,46600,'HKD','HK'],
-        ['GJZQ','02318','中国平安',40.481,10000,'HKD','HK'],
-        ['ZSZQ','00966','中国太平',13.626,25000,'HKD','HK'],
-        ['ZSZQ','02318','中国平安',42.122,4000,'HKD','HK']
-        */
-    ] ;
-
-    for(let i=0;i<accountData.length;i++){
-        let jsonTransaction={
-            transactionID:'d',
-            accountID:accountData[i][0],
-            ticker:accountData[i][1],
-            company:accountData[i][2],
-            operation:'buy',
-            price:accountData[i][3],
-            amount:accountData[i][4],
-            cDateTime:10,
-            currency:accountData[i][5],
-            exchange:accountData[i][6]
-        } ; 
-        console.log(jsonTransaction) ;
-        await _commitTransaction(jsonTransaction) ;
-        let jsonTicker={
-            ticker:jsonTransaction.ticker,
-            company:jsonTransaction.company,
-            currency:jsonTransaction.currency,
-            exchange:jsonTransaction.exchange
+    let jsonHoldings = await _fetchAllHoldings() ;
+    for(let i=0;i<jsonHoldings.length;i++){
+        let jsonTicker = {
+            ticker:jsonHoldings[i].ticker,
+            company:jsonHoldings[i].company,
+            currency:jsonHoldings[i].currency,
+            exchange:jsonHoldings[i].exchange,
+            quoteTTM:0,
+            datetime:cDatetime
         } ;
-    
-        await _newQuoteTicker(jsonTicker) ;
+        await _newUpdateQuoteTTM(jsonTicker) ;
     }
 }
 
-//initData() ;
-doWork() ;
+
+
+async function _updateDIVNASDAQ(jsonDIVNASDAQ){
+    let cDate = new Date() ;
+    jsonDIVNASDAQ.timestamp = cDate.getTime() ;
+    
+    sqlite3.verbose();
+    try {
+        console.log(jsonDIVNASDAQ) ;
+        const dbConnection = await createDbConnection(SQLDBFileQuote);
+
+        let cSelectStmt = `SELECT * FROM divTblNASDQ where ticker = ?` ;
+        let jsonDIVDB = await dbConnection.get(cSelectStmt, [jsonDIVNASDAQ.ticker]);
+        if(jsonDIVDB == undefined){
+            let cInsertStmt = `INSERT INTO divTblNASDQ (ticker,dividends,exchange,date,timestamp) VALUES ( ?,?,?,?,?)` ;
+            await dbConnection.run(cInsertStmt,[jsonDIVNASDAQ.ticker,JSON.stringify(jsonDIVNASDAQ.dividends),jsonDIVNASDAQ.exchange,jsonDIVNASDAQ.date,jsonDIVNASDAQ.timestamp]) ;
+            return ;
+        }else{
+            if(jsonDIVDB.date == jsonDIVNASDAQ.date)return ;
+            let cUpdateStmt = `UPDATE divTblNASDQ SET dividends=?,exchange=?,date=?,timestamp=? where ticker = ? ` ;
+            await dbConnection.run(cUpdateStmt,[JSON.stringify(jsonDIVNASDAQ.dividends),jsonDIVNASDAQ.exchange,jsonDIVNASDAQ.date,jsonDIVNASDAQ.timestamp,jsonDIVNASDAQ.ticker]) ;
+            return ;
+        }
+        
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
+
+async function _buildTriggersForHolding(){
+    const noFetchTickers=['MKL.SMART','BRK.SMART','BN.PR.B','FTS.PR.G','JPM.PRD','SPG.PRJ','US-T25','US-T29'];
+
+    let jsonHoldings = await _fetchAllHoldings() ;
+    let tickerAlready=[] ;
+    for(let i=0;i<jsonHoldings.length;i++){
+        if(noFetchTickers.includes(jsonHoldings[i].ticker))continue ;
+        if(tickerAlready.includes(jsonHoldings[i].ticker))continue ;
+
+        tickerAlready.push(jsonHoldings[i].ticker);
+        let jsonTrigger={
+            ticker:jsonHoldings[i].ticker,
+            lowerThan:0/*jsonHoldings[i].costPerShare*0.9*/,
+            exchange:jsonHoldings[i].exchange
+        } ;
+        /*
+        let jsonTicker = {
+            ticker:jsonHoldings[i].ticker,
+            company:jsonHoldings[i].company,
+            currency:jsonHoldings[i].currency,
+            exchange:jsonHoldings[i].exchange,
+            quoteTTM:0,
+            datetime:cDatetime
+        } ;
+        */
+        //await _newUpdateQuoteTTM(jsonTicker) ;
+        
+        await _newTrigger(jsonTrigger) ;
+    }
+}
+
+async function doWork(){
+    //await _commitTransaction(jsonTransaction) ;
+    //await _newQuoteTicker(jsonTicker) ;
+    //await _fetchAllTickers() ;
+   //await _batchClearancePortfolio() ;
+    //await _newTrigger(jsonTrigger) ;
+    //console.log(await _fetchAllTriggers()) ;
+    //await _resumeAllTriggers() ;
+    //await _updateQuotesUsingHolding() ;
+    //await _buildTriggersForHolding() ;
+    
+
+    //await _exportHolding2JSON('./exportJSON/holdings.json') ;
+    //testDuckDB() ;
+}
+
+/*
+"holdingID": 94,
+      "ticker": "01093",
+      "company": "石药集团",
+      "holding": 2000,
+      "costPerShare": 5.1,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+*/
+/*
+function testDuckDB(){
+    const db = new duckdb.Database(':memory:');
+    let sqlLoadJSON = `CREATE TABLE holdings AS SELECT * FROM './exportJSON/holdings.json';'` ;
+    db.all(
+        sqlLoadJSON,(err, res) => {
+          if (err) {
+            console.log("Error", err);
+          }else{
+            console.table(res);
+            db.all('SELECT * AS fortytwo', function(err, res) {
+                if (err) {
+                  console.warn(err);
+                  return;
+                }
+                console.log(res[0].fortytwo)
+              });
+          }
+        }
+    );
+    //
+    
+}
+*/
+//doWork() ;
 
 
 
@@ -574,6 +578,7 @@ exports.newUpdateAccountBS               = _newUpdateAccountBS ;
 exports.commitTransaction                = _commitTransaction ;
 exports.batchClearancePortfolio          = _batchClearancePortfolio ;
 
+exports.updateDIVNASDAQ                 = _updateDIVNASDAQ ;
 
 
 

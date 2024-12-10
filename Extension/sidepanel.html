@@ -413,111 +413,18 @@
         /*color: black;*/
     }
 </style>
-<style>
-    #larkStickyBar{
-        position: fixed;
-        top:0px;
-        left:0px;
-        width:100% ;
-        background-color: azure;
-    }
-</style>
-<style>
-/* Set default font-family */
-#editor {
-  font-family: 'Aref Ruqaa';
-  font-size: 18px;
-  height: 375px;
-}
 
-/* Set dropdown font-families */
-#toolbar .ql-font span[data-label='Aref Ruqaa']::before {
-  font-family: 'Aref Ruqaa';
-}
-#toolbar .ql-font span[data-label='Mirza']::before {
-  font-family: 'Mirza';
-}
-#toolbar .ql-font span[data-label='Roboto']::before {
-  font-family: 'Roboto';
-}
 
-/* Set content font-families */
-.ql-font-mirza {
-  font-family: 'Mirza';
-}
-.ql-font-roboto {
-  font-family: 'Roboto';
-}
-/* We do not set Aref Ruqaa since it is the default font */
-</style>
-<style>
-    .larkNote_Quill{
-        width:100vw;
-        height:100vh;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
-        justify-content: space-between;
-    }
-
-    .larkNote_Header{
-        width:100% ;
-    }
-
-    .larkNote_QuillEditor{
-        width:100% ;
-
-        flex-grow: 1;
-
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-
-    #editor{
-        flex-grow: 1;
-        width:100% ;
-    }
-
-    .larkNote_Footer{
-        width:100% ;
-        height:1.5rem;
-    }
-</style>
   </head>
   <body>
 
-    <div class="larkNote_Quill">
-        <div class="larkNote_Header" id="larkViewer">
-            Title goes here
-        </div>
-        <div class="larkNote_QuillEditor">
-            <div id="toolbar">
-                <select class="ql-font">
-                  <option selected>Aref Ruqaa</option>
-                  <option value="mirza">Mirza</option>
-                  <option value="roboto">Roboto</option>
-                </select>
-            </div>
-              
-            <div id="editor"></div>
-        </div>
-        
-        <div class="larkNote_Footer">
-            <button class="hint--up larkBTN" aria-label="SaveIt Later!">
-                <i class="bi-markdown larkBTNTakeNote"></i>
-            </button>
-        </div>
-    </div>
+    
 
   
     
     <!-- Include the Quill library -->
-    <script src="./jsResource/quill.js"></script>
     <script src="./jsResource/localforage.js"></script>
-    <script src="./larkSPNotes.js"></script>
+    <script src="./sidepanel.js"></script>
 
 
   </body>

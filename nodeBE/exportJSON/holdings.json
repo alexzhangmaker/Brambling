@@ -1,0 +1,1532 @@
+[
+   {
+      "holdingID": 12,
+      "ticker": "CNH",
+      "company": "CNH",
+      "holding": 10,
+      "costPerShare": 11.23,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB7075"
+   },
+   {
+      "holdingID": 13,
+      "ticker": "PAX",
+      "company": "PAX",
+      "holding": 1000,
+      "costPerShare": 11.75,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB7075"
+   },
+   {
+      "holdingID": 14,
+      "ticker": "BAM",
+      "company": "BAM",
+      "holding": 200,
+      "costPerShare": 39.66,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB7075"
+   },
+   {
+      "holdingID": 15,
+      "ticker": "APO",
+      "company": "APO",
+      "holding": 100,
+      "costPerShare": 99.88,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB7075"
+   },
+   {
+      "holdingID": 16,
+      "ticker": "MKL",
+      "company": "MKL",
+      "holding": 1,
+      "costPerShare": 1576,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB7075"
+   },
+   {
+      "holdingID": 17,
+      "ticker": "BN",
+      "company": "BN",
+      "holding": 500,
+      "costPerShare": 31.31,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB7075"
+   },
+   {
+      "holdingID": 18,
+      "ticker": "PFF",
+      "company": "PFF",
+      "holding": 10,
+      "costPerShare": 32.85,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB3979"
+   },
+   {
+      "holdingID": 19,
+      "ticker": "EWA",
+      "company": "EWA",
+      "holding": 10,
+      "costPerShare": 26.49,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB3979"
+   },
+   {
+      "holdingID": 20,
+      "ticker": "EWU",
+      "company": "EWU",
+      "holding": 10,
+      "costPerShare": 36.65,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB3979"
+   },
+   {
+      "holdingID": 21,
+      "ticker": "O",
+      "company": "Realty Income",
+      "holding": 200,
+      "costPerShare": 57.94,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB3979"
+   },
+   {
+      "holdingID": 22,
+      "ticker": "SCHD",
+      "company": "SCHD",
+      "holding": 640,
+      "costPerShare": 26.22,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB3979"
+   },
+   {
+      "holdingID": 23,
+      "ticker": "BEPC",
+      "company": "BEPC",
+      "holding": 200,
+      "costPerShare": 29.22,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 24,
+      "ticker": "BCE",
+      "company": "BCE",
+      "holding": 50,
+      "costPerShare": 29.72,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 25,
+      "ticker": "NGG",
+      "company": "NGG",
+      "holding": 10,
+      "costPerShare": 65.65,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 26,
+      "ticker": "ENB",
+      "company": "ENB",
+      "holding": 10,
+      "costPerShare": 56.58,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 27,
+      "ticker": "BIPC",
+      "company": "BIPC",
+      "holding": 10,
+      "costPerShare": 41.07,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 28,
+      "ticker": "FTS",
+      "company": "FTS",
+      "holding": 30,
+      "costPerShare": 43.1,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 29,
+      "ticker": "00014",
+      "company": "希慎兴业",
+      "holding": 0,
+      "costPerShare": 11.23,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 30,
+      "ticker": "01972",
+      "company": "太古地产",
+      "holding": 0,
+      "costPerShare": 12.71,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 31,
+      "ticker": "00010",
+      "company": "恒隆集团",
+      "holding": 0,
+      "costPerShare": 11.49,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 32,
+      "ticker": "00778",
+      "company": "置富产业信托",
+      "holding": 30000,
+      "costPerShare": 4.67,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 33,
+      "ticker": "00823",
+      "company": "领展房地产信托",
+      "holding": 5000,
+      "costPerShare": 39.17,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 42,
+      "ticker": "SEQI.L",
+      "company": "SEQI",
+      "holding": 100,
+      "costPerShare": 0.851,
+      "currency": "GBP",
+      "exchange": "LSE",
+      "accountID": "IB6325"
+   },
+   {
+      "holdingID": 43,
+      "ticker": "3IN.L",
+      "company": "3IN",
+      "holding": 100,
+      "costPerShare": 3.45,
+      "currency": "GBP",
+      "exchange": "LSE",
+      "accountID": "IB6325"
+   },
+   {
+      "holdingID": 44,
+      "ticker": "CTY.L",
+      "company": "CTY",
+      "holding": 100,
+      "costPerShare": 3.9747,
+      "currency": "GBP",
+      "exchange": "LSE",
+      "accountID": "IB6325"
+   },
+   {
+      "holdingID": 45,
+      "ticker": "GCP.L",
+      "company": "GCP",
+      "holding": 1000,
+      "costPerShare": 0.882,
+      "currency": "GBP",
+      "exchange": "LSE",
+      "accountID": "IB6325"
+   },
+   {
+      "holdingID": 46,
+      "ticker": "UKW.L",
+      "company": "UKW",
+      "holding": 4000,
+      "costPerShare": 1.4536,
+      "currency": "GBP",
+      "exchange": "LSE",
+      "accountID": "IB6325"
+   },
+   {
+      "holdingID": 47,
+      "ticker": "TRIG.L",
+      "company": "TRIG",
+      "holding": 6000,
+      "costPerShare": 1.104,
+      "currency": "GBP",
+      "exchange": "LSE",
+      "accountID": "IB6325"
+   },
+   {
+      "holdingID": 48,
+      "ticker": "HICL.L",
+      "company": "HICL",
+      "holding": 5000,
+      "costPerShare": 1.3976,
+      "currency": "GBP",
+      "exchange": "LSE",
+      "accountID": "IB6325"
+   },
+   {
+      "holdingID": 49,
+      "ticker": "INPP.L",
+      "company": "INPP",
+      "holding": 6000,
+      "costPerShare": 1.3361,
+      "currency": "GBP",
+      "exchange": "LSE",
+      "accountID": "IB6325"
+   },
+   {
+      "holdingID": 50,
+      "ticker": "00006",
+      "company": "电能实业",
+      "holding": 500,
+      "costPerShare": 49.22,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 51,
+      "ticker": "00010",
+      "company": "恒隆集团",
+      "holding": 6000,
+      "costPerShare": 10.005,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 52,
+      "ticker": "00014",
+      "company": "希慎兴业",
+      "holding": 8000,
+      "costPerShare": 12.75,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 53,
+      "ticker": "00135",
+      "company": "昆仑能源",
+      "holding": 2000,
+      "costPerShare": 7.645,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 54,
+      "ticker": "00177",
+      "company": "江苏宁沪高速",
+      "holding": 2000,
+      "costPerShare": 7.558,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 55,
+      "ticker": "00371",
+      "company": "北控水务集团",
+      "holding": 10000,
+      "costPerShare": 2.261,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 56,
+      "ticker": "00384",
+      "company": "中国燃气",
+      "holding": 2000,
+      "costPerShare": 6.737,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 57,
+      "ticker": "00683",
+      "company": "嘉里建设",
+      "holding": 1000,
+      "costPerShare": 16.336,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 58,
+      "ticker": "00728",
+      "company": "中国电信",
+      "holding": 10000,
+      "costPerShare": 4.618,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 59,
+      "ticker": "00836",
+      "company": "华润电力",
+      "holding": 2000,
+      "costPerShare": 19.536,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 60,
+      "ticker": "00941",
+      "company": "中国移动",
+      "holding": 1000,
+      "costPerShare": 71.108,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 61,
+      "ticker": "00966",
+      "company": "中国太平",
+      "holding": 50000,
+      "costPerShare": 16.375,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 62,
+      "ticker": "01038",
+      "company": "长江基建集团",
+      "holding": 500,
+      "costPerShare": 49.772,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 63,
+      "ticker": "01193",
+      "company": "华润燃气",
+      "holding": 400,
+      "costPerShare": 30.642,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 64,
+      "ticker": "02688",
+      "company": "新奥能源",
+      "holding": 100,
+      "costPerShare": 51.401,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 65,
+      "ticker": "09633",
+      "company": "农夫山泉",
+      "holding": 1000,
+      "costPerShare": 29.284,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 66,
+      "ticker": "02318",
+      "company": "中国平安",
+      "holding": 5000,
+      "costPerShare": 36.93,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 67,
+      "ticker": "SH600009",
+      "company": "上海机场",
+      "holding": 300,
+      "costPerShare": 42.261,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 68,
+      "ticker": "SH600887",
+      "company": "伊利股份",
+      "holding": 300,
+      "costPerShare": 22.96,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 69,
+      "ticker": "SH600007",
+      "company": "中国国贸",
+      "holding": 300,
+      "costPerShare": 22.75,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 72,
+      "ticker": "02318",
+      "company": "中国平安",
+      "holding": 4000,
+      "costPerShare": 40.733,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "ZSZQ"
+   },
+   {
+      "holdingID": 73,
+      "ticker": "00388",
+      "company": "香港交易所",
+      "holding": 200,
+      "costPerShare": 294.232,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 74,
+      "ticker": "SH515080",
+      "company": "中证红利ETF",
+      "holding": 12000,
+      "costPerShare": 1.5432,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 75,
+      "ticker": "SH515180",
+      "company": "红利ETF易方达",
+      "holding": 10000,
+      "costPerShare": 1.3395,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 76,
+      "ticker": "SH600007",
+      "company": "中国国贸",
+      "holding": 1000,
+      "costPerShare": 22.64,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 77,
+      "ticker": "SH600009",
+      "company": "长江电力",
+      "holding": 100,
+      "costPerShare": 27.74,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 78,
+      "ticker": "00001",
+      "company": "长和",
+      "holding": 1000,
+      "costPerShare": 40.76,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 79,
+      "ticker": "00006",
+      "company": "电能实业",
+      "holding": 500,
+      "costPerShare": 49.71,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 80,
+      "ticker": "00010",
+      "company": "恒隆集团",
+      "holding": 3000,
+      "costPerShare": 10.4,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 81,
+      "ticker": "00014",
+      "company": "希慎兴业",
+      "holding": 10000,
+      "costPerShare": 12.68,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 82,
+      "ticker": "00083",
+      "company": "信和置业",
+      "holding": 4000,
+      "costPerShare": 7.72,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 83,
+      "ticker": "00135",
+      "company": "昆仑能源",
+      "holding": 10000,
+      "costPerShare": 7.53,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 84,
+      "ticker": "00371",
+      "company": "北控水务集团",
+      "holding": 22000,
+      "costPerShare": 2.32,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 85,
+      "ticker": "00683",
+      "company": "嘉里建设",
+      "holding": 3000,
+      "costPerShare": 15.92,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 86,
+      "ticker": "00696",
+      "company": "中国民航信息网络",
+      "holding": 4000,
+      "costPerShare": 10.76,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 87,
+      "ticker": "00728",
+      "company": "中国电信",
+      "holding": 4000,
+      "costPerShare": 4.37,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 88,
+      "ticker": "00836",
+      "company": "华润电力",
+      "holding": 2000,
+      "costPerShare": 18.28,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 89,
+      "ticker": "00857",
+      "company": "中国石油股份",
+      "holding": 2000,
+      "costPerShare": 5.73,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 90,
+      "ticker": "00883",
+      "company": "中国海洋石油",
+      "holding": 3000,
+      "costPerShare": 17.8,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 91,
+      "ticker": "00941",
+      "company": "中国移动",
+      "holding": 1000,
+      "costPerShare": 70.57,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 92,
+      "ticker": "00995",
+      "company": "安徽皖通高速公路",
+      "holding": 4000,
+      "costPerShare": 8.71,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 93,
+      "ticker": "01038",
+      "company": "长江基建集团",
+      "holding": 1000,
+      "costPerShare": 51.73,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 94,
+      "ticker": "01093",
+      "company": "石药集团",
+      "holding": 2000,
+      "costPerShare": 5.1,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 95,
+      "ticker": "01113",
+      "company": "长实集团",
+      "holding": 500,
+      "costPerShare": 31.35,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 96,
+      "ticker": "01193",
+      "company": "华润燃气",
+      "holding": 1000,
+      "costPerShare": 29.71,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 97,
+      "ticker": "01972",
+      "company": "太古地产",
+      "holding": 2000,
+      "costPerShare": 15.76,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 98,
+      "ticker": "01997",
+      "company": "九龙仓置业",
+      "holding": 2000,
+      "costPerShare": 22.73,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 99,
+      "ticker": "02282",
+      "company": "美高梅中国",
+      "holding": 1200,
+      "costPerShare": 10.11,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 100,
+      "ticker": "02386",
+      "company": "中石化炼化工程",
+      "holding": 7000,
+      "costPerShare": 5.4,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "PAZQ"
+   },
+   {
+      "holdingID": 101,
+      "ticker": "SZ000858",
+      "company": "五粮液",
+      "holding": 200,
+      "costPerShare": 150.81,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 102,
+      "ticker": "00371",
+      "company": "北控水务集团",
+      "holding": 16000,
+      "costPerShare": 2.21,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 103,
+      "ticker": "00696",
+      "company": "中国民航信息网络",
+      "holding": 4000,
+      "costPerShare": 10.204,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 104,
+      "ticker": "00788",
+      "company": "中国铁塔",
+      "holding": 20000,
+      "costPerShare": 1.002,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 105,
+      "ticker": "00883",
+      "company": "中国海洋石油",
+      "holding": 1000,
+      "costPerShare": 16.948,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 106,
+      "ticker": "01876",
+      "company": "百威亚太",
+      "holding": 1000,
+      "costPerShare": 7.69,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 107,
+      "ticker": "01997",
+      "company": "九龙仓置业",
+      "holding": 3000,
+      "costPerShare": 21.358,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 108,
+      "ticker": "09988",
+      "company": "阿里巴巴",
+      "holding": 400,
+      "costPerShare": 86.131,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 109,
+      "ticker": "00966",
+      "company": "中国太平",
+      "holding": 30000,
+      "costPerShare": 15.695,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 110,
+      "ticker": "02318",
+      "company": "中国平安",
+      "holding": 10000,
+      "costPerShare": 38.914,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 111,
+      "ticker": "00003",
+      "company": "香港中华煤气",
+      "holding": 3000,
+      "costPerShare": 6.06,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 112,
+      "ticker": "00083",
+      "company": "信和置业",
+      "holding": 4000,
+      "costPerShare": 7.721,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 113,
+      "ticker": "00788",
+      "company": "中国铁塔",
+      "holding": 2000,
+      "costPerShare": 1.08,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 114,
+      "ticker": "00883",
+      "company": "中国海洋石油",
+      "holding": 1000,
+      "costPerShare": 18.562,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 115,
+      "ticker": "00995",
+      "company": "安徽皖通高速",
+      "holding": 2000,
+      "costPerShare": 9.24,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 116,
+      "ticker": "01972",
+      "company": "太古地产",
+      "holding": 200,
+      "costPerShare": 16.023,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 117,
+      "ticker": "01997",
+      "company": "九龙仓置业",
+      "holding": 5000,
+      "costPerShare": 22.189,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 118,
+      "ticker": "09988",
+      "company": "阿里巴巴",
+      "holding": 300,
+      "costPerShare": 93.223,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 119,
+      "ticker": "SH515180",
+      "company": "100红利",
+      "holding": 10000,
+      "costPerShare": 1.335,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 120,
+      "ticker": "SH600007",
+      "company": "中国国贸",
+      "holding": 1000,
+      "costPerShare": 23.075,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 121,
+      "ticker": "SH600009",
+      "company": "上海机场",
+      "holding": 100,
+      "costPerShare": 35.263,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 122,
+      "ticker": "SH600674",
+      "company": "川投能源",
+      "holding": 100,
+      "costPerShare": 17.364,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 123,
+      "ticker": "SH600886",
+      "company": "国投电力",
+      "holding": 300,
+      "costPerShare": 15.583,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 124,
+      "ticker": "SH600887",
+      "company": "伊利股份",
+      "holding": 100,
+      "costPerShare": 26.8,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 125,
+      "ticker": "SH600900",
+      "company": "长江电力",
+      "holding": 100,
+      "costPerShare": 28.14,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 126,
+      "ticker": "SH601006",
+      "company": "大秦铁路",
+      "holding": 200,
+      "costPerShare": 6.607,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 127,
+      "ticker": "SZ000429",
+      "company": "粤高速A",
+      "holding": 100,
+      "costPerShare": 10.981,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "GJZQ"
+   },
+   {
+      "holdingID": 128,
+      "ticker": "TLT",
+      "company": "TLT",
+      "holding": 1,
+      "costPerShare": 90.6,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB3979"
+   },
+   {
+      "holdingID": 129,
+      "ticker": "PFE",
+      "company": "辉瑞制药",
+      "holding": 10,
+      "costPerShare": 24.95,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB3979"
+   },
+   {
+      "holdingID": 130,
+      "ticker": "MKL.SMART",
+      "company": "MKL债券",
+      "holding": 2000,
+      "costPerShare": "TBD",
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB3979"
+   },
+   {
+      "holdingID": 131,
+      "ticker": "C38U",
+      "company": "凯德综合商业信托",
+      "holding": 2000,
+      "costPerShare": 1.95,
+      "currency": "SGD",
+      "exchange": "SGX",
+      "accountID": "IB3979"
+   },
+   {
+      "holdingID": 132,
+      "ticker": "A17U",
+      "company": "凯德滕飞房地产信托",
+      "holding": 2000,
+      "costPerShare": 2.61,
+      "currency": "SGD",
+      "exchange": "SGX",
+      "accountID": "IB3979"
+   },
+   {
+      "holdingID": 133,
+      "ticker": "BRK.SMART",
+      "company": "BRK债券",
+      "holding": 5000,
+      "costPerShare": "TBD",
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB3979"
+   },
+   {
+      "holdingID": 134,
+      "ticker": "MKL.SMART",
+      "company": "MKL债券",
+      "holding": 6000,
+      "costPerShare": "TBD",
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB3979"
+   },
+   {
+      "holdingID": 135,
+      "ticker": "CU",
+      "company": "加拿大公用事业公司",
+      "holding": 10,
+      "costPerShare": 36.21,
+      "currency": "CAD",
+      "exchange": "TSE",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 136,
+      "ticker": "BN.PR.B",
+      "company": "BN优先股",
+      "holding": 100,
+      "costPerShare": 11.41,
+      "currency": "CAD",
+      "exchange": "TSE",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 137,
+      "ticker": "MCD",
+      "company": "麦当劳",
+      "holding": 10,
+      "costPerShare": 289.02,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 138,
+      "ticker": "FTS.PR.G",
+      "company": "FTS优先股",
+      "holding": 100,
+      "costPerShare": 22.31,
+      "currency": "CAD",
+      "exchange": "TSE",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 139,
+      "ticker": "JPM.PRD",
+      "company": "JPM优先股",
+      "holding": 100,
+      "costPerShare": 25.25,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 140,
+      "ticker": "SPG.PRJ",
+      "company": "SPG优先股",
+      "holding": 50,
+      "costPerShare": 65.52,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 141,
+      "ticker": "PAC",
+      "company": "太平洋机场集团",
+      "holding": 50,
+      "costPerShare": 173.09,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 142,
+      "ticker": "US-T25",
+      "company": "美国国债",
+      "holding": 10000,
+      "costPerShare": "TBD",
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 143,
+      "ticker": "US-T29",
+      "company": "美国国债",
+      "holding": 10000,
+      "costPerShare": "TBD",
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 144,
+      "ticker": "PDD",
+      "company": "拼多多",
+      "holding": 50,
+      "costPerShare": 103.76,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 600013,
+      "ticker": "09888",
+      "company": "百度",
+      "holding": 0,
+      "costPerShare": 76.61,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 600014,
+      "ticker": "00388",
+      "company": "港交所",
+      "holding": 200,
+      "costPerShare": 287.06,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 600015,
+      "ticker": "515080",
+      "company": "中证红利ETF",
+      "holding": 10000,
+      "costPerShare": 1.475,
+      "currency": "CNY",
+      "exchange": "CN",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 600016,
+      "ticker": "00135",
+      "company": "昆仑能源",
+      "holding": 4000,
+      "costPerShare": 7.356,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "HTZQ"
+   },
+   {
+      "holdingID": 600017,
+      "ticker": "CNI",
+      "company": "加拿大国家铁路",
+      "holding": 10,
+      "costPerShare": 109.7,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 600018,
+      "ticker": "ENB.PR.B",
+      "company": "ENB优先股",
+      "holding": 100,
+      "costPerShare": 18.01,
+      "currency": "TSE",
+      "exchange": "TSE",
+      "accountID": "IB1279"
+   },
+   {
+      "holdingID": 600019,
+      "ticker": "00823",
+      "company": "领展房地产信托",
+      "holding": 120,
+      "costPerShare": 60.642,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "FTZQ"
+   },
+   {
+      "holdingID": 600020,
+      "ticker": "ADC",
+      "company": "Agree Realty",
+      "holding": 16,
+      "costPerShare": 62.95,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "FTZQ"
+   },
+   {
+      "holdingID": 600021,
+      "ticker": "ASR",
+      "company": "Grupo Aeroport",
+      "holding": 10,
+      "costPerShare": 278.71,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "FTZQ"
+   },
+   {
+      "holdingID": 600022,
+      "ticker": "KOF",
+      "company": "Coca-Cola FEMSA",
+      "holding": 10,
+      "costPerShare": 84.37,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "FTZQ"
+   },
+   {
+      "holdingID": 600023,
+      "ticker": "MCD",
+      "company": "麦当劳",
+      "holding": 10,
+      "costPerShare": 295.34,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "FTZQ"
+   },
+   {
+      "holdingID": 600024,
+      "ticker": "O",
+      "company": "Realty Income",
+      "holding": 112,
+      "costPerShare": 60.317,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "FTZQ"
+   },
+   {
+      "holdingID": 600025,
+      "ticker": "OMAB",
+      "company": "Central North",
+      "holding": 10,
+      "costPerShare": 66.23,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "FTZQ"
+   },
+   {
+      "holdingID": 600026,
+      "ticker": "PAC",
+      "company": "Pacific Airport",
+      "holding": 10,
+      "costPerShare": 173.17,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "FTZQ"
+   },
+   {
+      "holdingID": 600027,
+      "ticker": "SCHD",
+      "company": "SCHD",
+      "holding": 100,
+      "costPerShare": 28.259,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "FTZQ"
+   },
+   {
+      "holdingID": 600028,
+      "ticker": "SHV",
+      "company": "SHV",
+      "holding": 10,
+      "costPerShare": 110.506,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "FTZQ"
+   },
+   {
+      "holdingID": 600029,
+      "ticker": "TLT",
+      "company": "TLT",
+      "holding": 10,
+      "costPerShare": 92.75,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "FTZQ"
+   },
+   {
+      "holdingID": 600030,
+      "ticker": "UNP",
+      "company": "Union Pacific",
+      "holding": 10,
+      "costPerShare": 230.42,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "FTZQ"
+   },
+   {
+      "holdingID": 600031,
+      "ticker": "VZ",
+      "company": "Verizon",
+      "holding": 10,
+      "costPerShare": 41.1,
+      "currency": "USD",
+      "exchange": "US",
+      "accountID": "FTZQ"
+   },
+   {
+      "holdingID": 600032,
+      "ticker": "00966",
+      "company": "中国太平",
+      "holding": 2000,
+      "costPerShare": 17.973,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "LHZQ"
+   },
+   {
+      "holdingID": 600033,
+      "ticker": "01088",
+      "company": "中国神华",
+      "holding": 2000,
+      "costPerShare": 14.749,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "LHZQ"
+   },
+   {
+      "holdingID": 600034,
+      "ticker": "01171",
+      "company": "衮矿能源",
+      "holding": 3900,
+      "costPerShare": 3.26,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "LHZQ"
+   },
+   {
+      "holdingID": 600035,
+      "ticker": "00001",
+      "company": "长江和记",
+      "holding": 2000,
+      "costPerShare": 52.2,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "ZYXG"
+   },
+   {
+      "holdingID": 600036,
+      "ticker": "00700",
+      "company": "腾讯控股",
+      "holding": 200,
+      "costPerShare": 301.4,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "ZYXG"
+   },
+   {
+      "holdingID": 600037,
+      "ticker": "01336",
+      "company": "新华保险",
+      "holding": 2000,
+      "costPerShare": 31.2,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "ZYXG"
+   },
+   {
+      "holdingID": 600038,
+      "ticker": "01359",
+      "company": "中国信达",
+      "holding": 50000,
+      "costPerShare": 1.46,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "ZYXG"
+   },
+   {
+      "holdingID": 600039,
+      "ticker": "02202",
+      "company": "万科企业",
+      "holding": 2400,
+      "costPerShare": 21.15,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "ZYXG"
+   },
+   {
+      "holdingID": 600040,
+      "ticker": "02318",
+      "company": "中国平安",
+      "holding": 2000,
+      "costPerShare": 61.06,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "ZYXG"
+   },
+   {
+      "holdingID": 600041,
+      "ticker": "02601",
+      "company": "中国太保",
+      "holding": 13800,
+      "costPerShare": 26,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "ZYXG"
+   },
+   {
+      "holdingID": 600042,
+      "ticker": "02800",
+      "company": "盈富基金",
+      "holding": 4500,
+      "costPerShare": 23.82,
+      "currency": "HKD",
+      "exchange": "HK",
+      "accountID": "ZYXG"
+   }
+]
